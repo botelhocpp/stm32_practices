@@ -3,8 +3,10 @@ Code for the STM32F103 microcontroller from STM32, based on the ARM Cortex-M3. E
 
 - [X] Blinky
 - [X] OpenOCD & GDB
-- [ ] GPIO
-- [ ] Timers
-- [ ] Interrupts
+- [X] GPIO
+- [X] USART
+- [X] Timers
+- [X] Interrupts
+- [X] Newlib (Libc)
 - [ ] I2C
 - [ ] ADC

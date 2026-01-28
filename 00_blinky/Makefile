@@ -7,7 +7,8 @@ BUILD := build
 # Programs
 TC := arm-none-eabi
 CC := $(TC)-gcc
-OBJCOPY := $(TC)-objcopy
+OBJCPY := $(TC)-objcopy
+FLASHER := st-flash
 
 # Flags
 CFLAGS := -mcpu=cortex-m3 -mthumb -nostdlib -I$(BSP) -Wall
@@ -29,12 +30,12 @@ $(BUILD)/startup.o: $(BSP)/startup.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(BIN)/blinky.bin: $(BUILD)/blinky.elf
-	$(OBJCOPY) -O binary $< $@
+	$(OBJCPY) -O binary $< $@
 
 # ACTIONS
 
 flash: $(BIN)/blinky.bin
-	st-flash write $(BIN)/blinky.bin 0x08000000
+	$(FLASHER) write $< 0x08000000
 
 clean:
 	rm -f *.o $(BUILD)/* $(BIN)/*
