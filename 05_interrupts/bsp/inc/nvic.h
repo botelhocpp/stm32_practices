@@ -1,0 +1,55 @@
+#ifndef NVIC_H
+#define NVIC_H
+
+#define NVIC_PRIORITY_BASE  (7)
+#define NVIC_PRIORITY(id)   (id - NVIC_PRIORITY_BASE)
+
+#define NVIC_WWDG           (0)
+#define NVIC_PVD            (1)
+#define NVIC_TAMPER         (2)
+#define NVIC_RTC            (3)
+#define NVIC_FLASH          (4)
+#define NVIC_RCC            (5)
+#define NVIC_EXTI0          (6)
+#define NVIC_EXTI1          (7)
+#define NVIC_EXTI2          (8)
+#define NVIC_EXTI3          (9)
+#define NVIC_EXTI4          (10)
+#define NVIC_DMA1_CH1       (11)
+#define NVIC_DMA1_CH2       (12)
+#define NVIC_DMA1_CH3       (13)
+#define NVIC_DMA1_CH4       (14)
+#define NVIC_DMA1_CH5       (15)
+#define NVIC_DMA1_CH6       (16)
+#define NVIC_DMA1_CH7       (17)
+#define NVIC_ADC1_ADC2      (18)
+#define NVIC_USB_HP_CAN_TX  (19)
+#define NVIC_USB_LP_CAN_RX0 (20)
+#define NVIC_CAN_RX0        (21)
+#define NVIC_CAN_SCE        (22)
+#define NVIC_EXTI5_TO_9     (23)
+#define NVIC_TIM1_BRK       (24)
+#define NVIC_TIM1_UP        (25)
+#define NVIC_TIM1_TRG_COM   (26)
+#define NVIC_TIM1_CC        (27)
+#define NVIC_TIM2           (28)
+#define NVIC_TIM3           (29)
+#define NVIC_TIM4           (30)
+#define NVIC_I2C1_EV        (31)
+#define NVIC_I2C1_ER        (32)
+#define NVIC_I2C2_EV        (33)
+#define NVIC_I2C2_ER        (34)
+#define NVIC_SPI1           (35)
+#define NVIC_SPI2           (36)
+#define NVIC_USART1         (37)
+#define NVIC_USART2         (38)
+#define NVIC_USART3         (39)
+#define NVIC_EXTI10_TO_15   (40)
+#define NVIC_RTC_ALARM      (41)
+#define NVIC_USB_WAKEUP     (42)
+
+void nvic_enable_interrupt(int id);
+
+void nvic_disable_interrupt(int id);
+
+#endif // NVIC_H
