@@ -1,0 +1,10 @@
+#ifndef RESOLUTION_H
+#define RESOLUTION_H
+
+#define DISPLAY_WIDTH       (128)
+#define DISPLAY_HEIGHT      (64)
+#define DISPLAY_PAGES       (8)
+#define DISPLAY_COLS        (DISPLAY_WIDTH/FONT_WIDTH)
+#define DISPLAY_ROWS        (DISPLAY_HEIGHT/DISPLAY_PAGES)
+
+#endif // RESOLUTION_H
